@@ -1,0 +1,29 @@
+﻿@model TesteSiteNoticias.Models.Post
+
+@{
+    ViewData["Title"] = @Model.Titulo;
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    
+    <hr />
+
+    
+    <div class="row">
+
+        <div class="col-lg-12">
+            <img src="~/img/@Model.Imagem"/>
+        </div>
+        <hr />
+        <div class="col-lg-12">
+            <p>@Model.Conteudo</p>
+        </div>
+        
+    </div>
+</div>
+<div>
+    <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model.PostId">Editar</a> |
+    <a class="btn btn-dark" asp-action="Index">Voltar</a>
+</div>
